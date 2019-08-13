@@ -1,0 +1,180 @@
+:root {
+    --squareSize: 150px;
+    --lineBorderThickness: 5px;
+}
+body {
+    background-color: black;
+    background-image: url("../images/bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+#main {
+    width: 500px;
+}
+#main div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#gameContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc(var(--squareSize) * 3 + (var(--lineBorderThickness)*2));
+    height: calc(var(--squareSize) * 3 + (var(--lineBorderThickness)*2));
+    margin: 10px;
+}
+#gameContainer div  {
+    /* position: absolute; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /* flex-flow: row; */
+}
+#controls, #controls div {
+    width: 100%;
+}
+#startGameDialog {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+#startGameDialog, #gameCompleteDialog {
+    width: 100%;
+    height: 100%;
+    position:relative;
+    top:-100%;
+    left:0px;
+}
+#startGameButton, #gameFinishedButton {
+    font-family: 'Lexend Exa', sans-serif;
+    font-size: 35px;
+    color: #000;
+    text-shadow: 0px 0px 4px #FFF;
+    padding: 10px;
+    border-radius: 10px;
+    background: white;
+    width: 70%;
+    height: auto;
+    text-align: center;
+    box-shadow: 0px 5px 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    cursor: default;
+}
+#startGameButton:hover, #gameFinishedButton:hover {
+    background: white;
+    box-shadow: 0px 0px 10px white;
+}
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--squareSize);
+    height: var(--squareSize);
+}
+.hover:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+#square0, #square1, #square2, #square3, #square4, #square5 {
+    border-bottom: var(--lineBorderThickness) solid rgba(0, 0, 0, 0.8);
+}
+#square0, #square1, #square3,#square4, #square6, #square7 {
+    border-right: var(--lineBorderThickness) solid rgba(0, 0, 0, 0.8);
+}
+#playerNames {
+    width: 100%;
+    display: flex;
+}
+#playerNames div {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+input[type=text] {
+    text-align: center;
+    padding-top: 10px;
+    height: 50px;
+    width: 95%;
+    font-size: 45px;
+    font-family: 'Luckiest Guy', cursive;
+    border-radius: 10px;
+}
+h3 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 50px;
+    margin: 8px;
+    color: white;
+    text-shadow: 0px 0px 6px black;
+}
+h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+}
+.redTurn {
+    text-shadow: 0px 0px 10px red;
+    font-size: 55px;
+}
+.blueTurn {
+    text-shadow: 0px 0px 10px blue;
+    font-size: 55px;
+}
+#x {
+    color: red;
+    text-shadow: 0px 0px 3px black;
+    cursor: default;
+}
+#o {
+    color: blue;
+    text-shadow: 0px 0px 3px black;
+    cursor: default;
+}
+.winRed {
+    background-color: rgba(255,0,0,0.55);
+}
+.winBlue {
+    background-color: rgba(0,0,255,0.55);
+}
+#resetButton {
+    width: auto;
+    height: auto;
+    border: 0px;
+    border-radius: 5px;
+    font-size: 18px;
+    background: #DDD;
+}
+#resetButton:hover {
+    background: white;
+    box-shadow: 0px 0px 3px white;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+#footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    padding-right: 20px;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background: #ccc;
+    font-size: 14px;
+    font-family: Arial;
+}
+#githubLogo {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
